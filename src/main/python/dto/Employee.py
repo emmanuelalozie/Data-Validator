@@ -1,8 +1,16 @@
 import pandas as pd
-from main.python.dto.Employee import Employees
 
-def load_excel():
-    df = pd.read_excel('path/to/your/excel/file.xlsx', sheet_name='Employee')
+class Employee:
+    
+    def __init__(self, name, email, store_manager_id, store_id):
+        # Load the Excel file
+        self.name = name
+        self.email = email
+        self.store_manager_id = store_manager_id
+        self.store_id = store_id
+
+def load_employees(self) -> list:
+    df = pd.read_excel('path/to/your/excel/file.xlsx', sheet_name='Employees')
 
     # Get the column headers
     column_headers = df.columns.tolist()
@@ -37,4 +45,4 @@ def load_excel():
 
 
 if __name__ == "__main__":
-    load_excel()
+    load_employees()
